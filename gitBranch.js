@@ -21,15 +21,27 @@ app.get('/gitBranch', async function getGitBranch(req,res){
         }
         return_response.status = 200;
         return_response.message = "Success";
-        return_response.data = git.branch();
-        console.log(response.data);
+        return_response.data = data;
+        console.log(data);
     } catch (error) {
         console.error(error);
     }
     res.json(return_response);
 })
 
-
+// {
+//     "status": 200,
+//     "message": "Success",
+//     "data": {
+//         "project": "taskApi",
+//         "running": true,
+//         "version": "1.0.0",
+//         "branch": "master",
+//         "head": "21fad57",
+//         "head-long": "21fad57139bef97a25873735a0c542560205d552",
+//         "date": "2021-05-30T07:17:24.000Z"
+//     }
+// }
 
 app.listen(PORT, () => {
     console.log(`app listening on port:${PORT}`)
