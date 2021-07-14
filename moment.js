@@ -15,6 +15,10 @@ console.log(moment().month())
 console.log(moment().year())
 console.log(moment().set({'year': 2013, 'month': 3})) //Moment<2013-04-14T11:37:52+05:30>
 console.log(moment().toString()) //Wed Jul 14 2021 12:00:40 GMT+0530
+console.log(moment().format('L')) //07/14/2021
+console.log(moment().format('LL')) //July 14, 2021
+console.log(moment().format('LTS')) //12:18:03 PM
+
 
 console.log(moment().add(30, 'days').add(1, 'months').add(25, 'minutes').toString()) //Mon Sep 13 2021 12:27:02 GMT+0530
 
